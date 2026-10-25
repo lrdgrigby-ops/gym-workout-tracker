@@ -1,78 +1,247 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Gym Workout Tracker</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
+<header>
+    <div class="header-content">
+        <div class="brand-label">YOUR FITNESS COMPANION</div>
         <h1>Gym Workout Tracker</h1>
-        <p>Track your workouts and monitor your progress.</p>
-    </header>
+        <p>Stronger every day. Track your progress, explore exercises, and stay consistent.</p>
+    </div>
+</header>
 
-    <main>
+<main>
 
-        <section class="dashboard">
-            <div class="card">
-                <h3>Workouts</h3>
-                <p class="number">12</p>
-                <span>This month</span>
+    <!-- DASHBOARD -->
+    <section class="dashboard">
+        <div class="card">
+            <div class="card-icon">🏋️</div>
+            <h3>Workouts</h3>
+            <p class="number" id="total-workouts">0</p>
+            <span>Total recorded</span>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">💪</div>
+            <h3>Total Exercises</h3>
+            <p class="number" id="total-exercises">0</p>
+            <span>Unique exercises</span>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🔥</div>
+            <h3>Workout Days</h3>
+            <p class="number" id="workout-days">0</p>
+            <span>Days recorded</span>
+        </div>
+    </section>
+
+    <!-- EXERCISE LIBRARY -->
+    <section class="exercise-library">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">TRAIN SMARTER</span>
+                <h2>Explore Exercises</h2>
+                <p>Find your next workout and learn the proper technique.</p>
             </div>
+            <span class="section-pill">6 EXERCISES</span>
+        </div>
 
-            <div class="card">
-                <h3>Total Exercises</h3>
-                <p class="number">36</p>
-                <span>Completed</span>
+        <div class="exercise-grid">
+
+            <article class="exercise-card">
+                <div class="exercise-image">
+                    <img
+                        src="https://images.pexels.com/photos/4162487/pexels-photo-4162487.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                        alt="Strength training in a gym"
+                        loading="lazy">
+                    <span class="image-label">LOWER BODY</span>
+                </div>
+                <div class="exercise-content">
+                    <h3>Squats</h3>
+                    <p>Build stronger quads and glutes. Brace your core and lower with control.</p>
+                    <a href="https://www.youtube.com/results?search_query=how+to+barbell+squat+proper+form"
+                       target="_blank" rel="noopener noreferrer">
+                        ▶ Watch Tutorial
+                    </a>
+                </div>
+            </article>
+
+            <article class="exercise-card">
+                <div class="exercise-image">
+                    <img
+                        src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                        alt="Gym training equipment"
+                        loading="lazy">
+                    <span class="image-label">GLUTES</span>
+                </div>
+                <div class="exercise-content">
+                    <h3>Hip Thrusts</h3>
+                    <p>Strengthen your glutes by driving through your feet and controlling the movement.</p>
+                    <a href="https://www.youtube.com/results?search_query=barbell+hip+thrust+proper+form"
+                       target="_blank" rel="noopener noreferrer">
+                        ▶ Watch Tutorial
+                    </a>
+                </div>
+            </article>
+
+            <article class="exercise-card">
+                <div class="exercise-image">
+                    <img
+                        src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                        alt="Gym fitness training"
+                        loading="lazy">
+                    <span class="image-label">LOWER BODY</span>
+                </div>
+                <div class="exercise-content">
+                    <h3>Lunges</h3>
+                    <p>Train your legs, glutes, and balance with controlled stepping movements.</p>
+                    <a href="https://www.youtube.com/results?search_query=dumbbell+lunges+proper+form"
+                       target="_blank" rel="noopener noreferrer">
+                        ▶ Watch Tutorial
+                    </a>
+                </div>
+            </article>
+
+            <article class="exercise-card">
+                <div class="exercise-image">
+                    <img
+                        src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                        alt="Resistance training at a gym"
+                        loading="lazy">
+                    <span class="image-label">BACK</span>
+                </div>
+                <div class="exercise-content">
+                    <h3>Lat Pulldown</h3>
+                    <p>Develop your back muscles by pulling toward your upper chest with control.</p>
+                    <a href="https://www.youtube.com/results?search_query=lat+pulldown+proper+form"
+                       target="_blank" rel="noopener noreferrer">
+                        ▶ Watch Tutorial
+                    </a>
+                </div>
+            </article>
+
+            <article class="exercise-card">
+                <div class="exercise-image">
+                    <img
+                        src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                        alt="Dumbbell training at the gym"
+                        loading="lazy">
+                    <span class="image-label">ARMS</span>
+                </div>
+                <div class="exercise-content">
+                    <h3>Bicep Curls</h3>
+                    <p>Strengthen your arms by keeping your elbows steady and avoiding momentum.</p>
+                    <a href="https://www.youtube.com/results?search_query=dumbbell+bicep+curls+proper+form"
+                       target="_blank" rel="noopener noreferrer">
+                        ▶ Watch Tutorial
+                    </a>
+                </div>
+            </article>
+
+            <article class="exercise-card">
+                <div class="exercise-image">
+                    <img
+                        src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                        alt="Fitness exercise training"
+                        loading="lazy">
+                    <span class="image-label">CORE</span>
+                </div>
+                <div class="exercise-content">
+                    <h3>Plank</h3>
+                    <p>Improve core stability by keeping your body aligned and your abdomen engaged.</p>
+                    <a href="https://www.youtube.com/results?search_query=plank+exercise+proper+form"
+                       target="_blank" rel="noopener noreferrer">
+                        ▶ Watch Tutorial
+                    </a>
+                </div>
+            </article>
+
+        </div>
+        <p class="image-note">
+            Images are illustrative fitness photos. Tutorial buttons open external video search results.
+        </p>
+    </section>
+
+    <!-- WORKOUT FORM -->
+    <section class="workout-form">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">TRACK YOUR PROGRESS</span>
+                <h2>Add Workout</h2>
+                <p>Log your training session and build consistency.</p>
             </div>
+        </div>
 
-            <div class="card">
-                <h3>Workout Streak</h3>
-                <p class="number">5</p>
-                <span>Days</span>
+        <form id="workout-form">
+
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+
+            <label for="exercise">Exercise</label>
+            <input
+                type="text"
+                id="exercise"
+                maxlength="80"
+                placeholder="e.g. Squats"
+                required>
+
+            <label for="sets">Sets</label>
+            <input
+                type="number"
+                id="sets"
+                min="1"
+                step="1"
+                placeholder="e.g. 3"
+                required>
+
+            <label for="reps">Reps</label>
+            <input
+                type="number"
+                id="reps"
+                min="1"
+                step="1"
+                placeholder="e.g. 10"
+                required>
+
+            <label for="weight">Weight (kg)</label>
+            <input
+                type="number"
+                id="weight"
+                min="0"
+                step="0.1"
+                placeholder="e.g. 20"
+                required>
+
+            <button type="submit" id="add-button">
+                + Add Workout
+            </button>
+
+        </form>
+
+        <p id="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- WORKOUT HISTORY -->
+    <section class="history">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">YOUR FITNESS JOURNEY</span>
+                <h2>Workout History</h2>
+                <p>Review your completed training sessions.</p>
             </div>
-        </section>
+        </div>
 
-
-        <section class="workout-form">
-
-            <h2>Add Workout</h2>
-
-            <form>
-
-                <label for="date">Date</label>
-                <input type="date" id="date">
-
-                <label for="exercise">Exercise</label>
-                <input type="text" id="exercise" placeholder="e.g. Squats">
-
-                <label for="sets">Sets</label>
-                <input type="number" id="sets" placeholder="e.g. 3">
-
-                <label for="reps">Reps</label>
-                <input type="number" id="reps" placeholder="e.g. 10">
-
-                <label for="weight">Weight (kg)</label>
-                <input type="number" id="weight" placeholder="e.g. 20">
-
-                <button type="submit">Add Workout</button>
-
-            </form>
-
-        </section>
-
-
-        <section class="history">
-
-            <h2>Workout History</h2>
-
+        <div class="table-wrapper">
             <table>
-
                 <thead>
                     <tr>
                         <th>Date</th>
@@ -80,36 +249,22 @@
                         <th>Sets</th>
                         <th>Reps</th>
                         <th>Weight</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
 
-                <tbody>
-
-                    <tr>
-    <td>09/24/2026</td>
-    <td>Squats</td>
-    <td>3</td>
-    <td>10</td>
-    <td>20 kg</td>
-    <td><button class="delete-btn" type="button">Delete</button></td>
-</tr>
-                   <tr>
-    <td>09/23/2026</td>
-    <td>Hip Thrust</td>
-    <td>4</td>
-    <td>12</td>
-    <td>30 kg</td>
-    <td><button class="delete-btn" type="button">Delete</button></td>
-</tr>
-
-                </tbody>
-
+                <tbody id="workout-list"></tbody>
             </table>
+        </div>
+    </section>
 
-        </section>
+</main>
 
-    </main>
+<footer>
+    <p>GYM WORKOUT TRACKER</p>
+    <span>Progress over perfection. One workout at a time. 💗</span>
+</footer>
+
 <script src="script.js"></script>
-
 </body>
 </html>
