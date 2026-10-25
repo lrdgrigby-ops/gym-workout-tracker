@@ -1,0 +1,5 @@
+
+node_modules/
+workouts.json
+workouts.json.tmp
+.DS_Store
